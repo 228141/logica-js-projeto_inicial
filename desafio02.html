@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 02</title>
+</head>
+
+<body>
+    <div>
+        Pergunta 01
+
+        Você é uma pessoa desenvolvedora de software em uma clínica médica chamada Médica Voll. A empresa deseja que você crie um pequeno jogo de adivinhação para seus pacientes enquanto eles estão na sala de espera. Então, você decide criar um jogo do número secreto usando JavaScript, conforme a seguir:
+
+        alert('Bem-vindo ao jogo do número secreto')
+        let chute = prompt('Escolha um número entre 1 e 10')
+        
+        let numeroSecreto = 4
+        
+        console.log(chute == numeroSecreto)
+        if (chute == numeroSecreto) {
+            alert('Acertou')
+        } else {
+            alert('O número secreto era ' + numeroSecreto)
+        }
+        Copiar código
+        Dada essa estrutura básica de código que você criou, como você modificaria a mensagem do alerta para incluir o número que o usuário escolheu, caso não acertasse o número secreto? Escolha a alternativa correta:
+        
+        Obs: Note que o "+" usado serve como uma alternativa ao `-> template de strings já apresentado para realizarmos concatenação de strings/caracteres/valores de varíaveis no JavaScript.
+
+        a) alert('O número secreto era  numeroSecreto e você escolheu chute')
+
+        b) Alternativa correta  (Parabéns, você acertou!)
+        alert('O número secreto era ' + numeroSecreto + ', mas você escolheu ' + chute);
+
+        Este código corretamente concatena o número secreto e a escolha do paciente na mensagem de alerta.
+
+        c) Alternativa correta
+        alert('O número secreto era ' + numeroSecreto + chute)
+
+        d) Alternativa correta
+        alert('O número secreto era ' + numeroSecreto, ' e você escolheu ' + chute)
+
+       Pergunta 2
+
+       Você é uma pessoa desenvolvedora de software que desenvolve aplicações para o Detran, que é o órgão responsável pela fiscalização e regulamentação do trânsito, habilitação de condutores, registro e licenciamento de veículos no Brasil.
+
+        A idade mínima para dirigir no Brasil é 18 anos. Sabendo disso, uma equipe criou o seguinte programa:
+
+        let idade = prompt("Digite sua idade:");
+
+        if (idade >= 18) {
+        console.log("Você é maior de idade.");
+        } else {
+        console.log("Você é menor de idade.");
+        }
+        
+        Com essa base, analise as afirmações abaixo e marque apenas as verdadeiras.
+
+        a) Caso a idade seja igual a 18, a mensagem do console que será exibida será: Você é menor de idade.
+
+
+        b) Alternativa correta - Caso a idade seja igual a 18, a mensagem do console que será exibida será: Você é maior de idade.
+
+        Esta afirmação está correta. Se a idade digitada for igual a 18, a condição no if será verdadeira (idade >= 18 é verdadeiro), e a mensagem "Você é maior de idade" será exibida, pois o operador >= inclui o valor 18. O bloco de código dentro do else será ignorado.
+
+        c) Alternativa correta - Caso a idade seja menor que 18, a mensagem do console que será exibida será: Você é menor de idade.
+
+        Esta afirmação está correta. Se a idade digitada for menor que 18, a condição no if será falsa (idade >= 18 é falso), e o fluxo de execução seguirá para o bloco do else, exibindo a mensagem "Você é menor de idade".
+        
+        d) Caso a idade seja maior que 18, a mensagem do console que será exibida será: Você é menor de idade.
+
+        Parabéns, você acertou!
+
+        Pergunta 3
+
+        Você é uma pessoa recém-chegada à equipe de desenvolvimento do Jornada Milhas, um site de compra de pacotes de viagens para os principais destinos do mundo.
+
+        Como primeira tarefa, sua liderança pediu para que você corrigisse um bug que tem acontecido quando uma pessoa cliente do site tenta utilizar suas milhas do cartão de crédito para obter desconto nos pacotes de viagem. Para isso, foi apresentado o seguinte código:
+                
+        let porcentagemDesconto = 0;
+
+        if(quantidadeMilhas > 5000){
+            porcentagemDesconto = porcentagemDesconto + 10;
+        }
+
+        if(quantidadeMilhas >= 30000){
+            porcentagemDesconto = porcentagemDesconto + 20;
+        } else {
+            porcentagemDesconto = 0;
+        }
+
+        Para te ajudar a compreender a origem do bug, sua liderança explicou a regra de negócio utilizada para compras de pacotes de viagens com milhas:
+
+        Pessoas com uma quantidade de milhas inferior a 5.000 não recebem desconto.
+        Pessoas com uma quantidade de milhas igual ou superior a 30.000 recebem 20% de desconto.
+        Pessoas com uma quantidade de milhas superior a 5.000, mas inferior a 30.000, recebem 10% de desconto.
+        Mas, segundo relatos de clientes, ao tentar utilizar o desconto referente a 5.000 milhas, não ocorre nenhum desconto. Já clientes com mais de 30.000 milhas estão recebendo desconto excedente ao que deveriam receber.
+
+        Como você poderia modificar o código para que ele funcione corretamente? Selecione a opção correta:
+
+        a) Fazendo com que o desconto não seja somado, apenas definido com base nas milhas, como:
+
+        let porcentagemDesconto = 0;
+
+        if(quantidadeMilhas > 5000){
+            porcentagemDesconto = 10;
+        }
+
+        if(quantidadeMilhas > 30000){
+            porcentagemDesconto = 20;
+        } else {
+            porcentagemDesconto = 0;
+        }
+
+        Observação: Como ainda existe o bloco else, que zera o desconto quando a quantidade de milhas é inferior a 30000, o código ainda persiste com o bug, no entanto, ao retirar esse bloco, o programa já apresentaria o resultado esperado
+
+        b) Removendo o bloco else da estrutura condicional
+
+        Observação: Apesar de resolver o problema do desconto zerado para clientes com menos de 30000 milhas, o código ainda continuaria dando desconto excedente para as pessoas com mais de 30000.
+
+        
+        c) Adicionando outro bloco else, referente ao bloco if(quantidadeMilhas > 5000), com o código:
+        if(quantidadeMilhas > 5000){
+            porcentagemDesconto = porcentagemDesconto + 10;
+        } else{
+            porcentagemDesconto = porcentagemDesconto + 20;
+        }
+        if(quantidadeMilhas > 30000){
+            porcentagemDesconto = porcentagemDesconto + 20;
+        } else {
+            porcentagemDesconto = 0;
+        }
+
+        Observação: Essa alteração não altera o funcionamento do código, pois no caso de a quantidade de milhas ser inferior a 5000 e inferior a 3000, o desconto continua sendo zerado no último bloco else.
+
+        d) Alternativa correta - Fazendo a utilização de um bloco if dentro do bloco else, como:
+
+        let porcentagemDesconto = 0;
+
+        if(quantidadeMilhas >= 30000){
+            porcentagemDesconto = porcentagemDesconto + 20;
+        } else {
+            if(quantidadeMilhas > 5000){
+            porcentagemDesconto = porcentagemDesconto + 10;
+        }
+
+        }
+
+        Observação: A utilização do bloco if dentro do bloco else garante que, caso a quantidade de milhas for superior a 30000, o desconto será de 20%, e caso não for superior a este valor, mas for superior a 5000, o desconto será de 10%. Para o caso da quantidade de milhas ser inferior a 5000, o desconto permanecerá zerado, pois não existe a quantidade mínima para ganhar desconto.
+
+        Prática 
+
+        O console.log é uma função muito importante em linguagens de programação, especialmente quando se trabalha com JavaScript. Sua principal função é imprimir mensagens no console do ambiente de desenvolvimento, o que permite testar informações relevantes durante a execução de um programa.
+
+        Sua vez: inclua comandos console.log em diferentes partes do código para verificar o fluxo do programa, os valores das variáveis e outras informações relevantes durante a fase de desenvolvimento.
+
+        Opinião do instrutor
+
+        No código a seguir temos uma sugestão da inclusão do comando console.log adicionado para verificar se os valores estão sendo atribuídos corretamente às variáveis e se as condições estão sendo avaliadas como esperado. Confira:
+
+        alert('Boas vindas ao jogo do número secreto');
+
+        // Adicione um console.log para verificar o valor de "chute" após a entrada do usuário
+        let chute = prompt('Escolha um número entre 1 e 10');
+        console.log('Valor do chute:', chute);
+
+        let numeroSecreto = 4;
+
+        // Adicione um console.log para verificar a comparação entre "chute" e "numeroSecreto"
+        console.log('Resultado da comparação:', chute == numeroSecreto);
+
+        if (chute == numeroSecreto) {
+            alert('Acertou');
+        } else {
+            // Adicione um console.log para verificar o valor de "numeroSecreto" quando o jogador erra
+            console.log('Valor do número secreto:', numeroSecreto);
+            alert('O número secreto era ' + numeroSecreto);
+        }
+
+        É importante lembrar que, quando o projeto ficar disponível para todas as pessoas, o que chamamos no contexto de software de ambiente de produção, os comandos console.log devem ser removidos ou desabilitados, pois podem causar problemas de desempenho e segurança.
+
+        Programação é prática! Criamos mais uma lista de atividades (não obrigatórias) para você exercitar e reforçar ainda mais seu aprendizado.Bora praticar?
+
+
+        Desafios
+        Pergunte ao usuário qual é o dia da semana. Se a resposta for "Sábado" ou "Domingo", mostre "Bom fim de semana!". Caso contrário, mostre "Boa semana!".
+
+        Verifique se um número digitado pelo usuário é positivo ou negativo. Mostre um alerta informando.
+
+        Crie um sistema de pontuação para um jogo. Se a pontuação for maior ou igual a 100, mostre "Parabéns, você venceu!". Caso contrário, mostre "Tente novamente para ganhar.".
+
+        Crie uma mensagem que informa o usuário sobre o saldo da conta, usando uma template string para incluir o valor do saldo.
+
+        Peça ao usuário para inserir seu nome usando prompt. Em seguida, mostre um alerta de boas-vindas usando esse nome.
+
+        Caso precise de ajuda, opções de solução das atividades estarão disponíveis na seção “Opinião da pessoa instrutora”.
+
+        10 Para saber mais: ponto e vírgula no JavaScript
+        Próxima Atividade
+        
+        No JavaScript, o uso do ponto e vírgula (;) é uma prática recomendada. A linguagem possui um mecanismo chamado "inserção automática de ponto e vírgula" (automatic semicolon insertion - ASI), que tenta adicionar ponto e vírgulas automaticamente em certos pontos do código onde eles são ausentes.
+        
+        Isso significa que, em alguns casos, o JavaScript tentará "corrigir" a falta de ponto e vírgula inserindo-o automaticamente. No entanto, a interpretação do ASI pode levar a comportamentos inesperados e erros sutis, especialmente quando as regras não são claras.
+        
+        Portanto, para evitar possíveis problemas e garantir a clareza do código, muitos desenvolvedores preferem adicionar explicitamente ponto e vírgula em seus programas.
+        
+        Apesar da inserção automática de ponto e vírgula poder ajudar a mitigar erros de sintaxe, é uma boa prática adicionar ponto e vírgula manualmente para evitar ambiguidades e problemas de interpretação. Isso é particularmente importante em situações como quando várias instruções estão em uma mesma linha, ao usar declarações de retorno de valor ou ao minificar o código.
+        
+        Em projetos colaborativos ou de grande escala, a consistência no estilo de codificação e a clareza do código são cruciais, e o uso explícito de ponto e vírgula contribui para um código mais legível e menos sujeito a erros de interpretação por parte dos programadores e do próprio mecanismo de ASI.
+        
+        Leitura complementar da documentação sobre o JavaScript. (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)
+        
+        Quer saber o que a comunidade recomenda? Leia mais neste link do Stack Overflow. (https://pt.stackoverflow.com/questions/3341/utilizar-ou-n%C3%A3o-ponto-e-v%C3%ADrgula-no-fim-das-linhas-em-javascript)
+
+        11 O que aprendemos?
+        Próxima Atividade
+        
+        Nesta aula:
+        Utilizamos o console para testar e depurar nosso código, exibindo mensagens e valores durante a execução do programa;
+        
+        Aprendemos a utilizar estruturas condicionais (if/else) para criar lógicas que permitem ao programa tomar decisões com base em condições específicas;
+        
+        Implementamos um bloco de código para exibir uma mensagem caso o chute do usuário não seja igual ao número secreto;
+        
+        Usamos template strings para concatenar o número secreto com o valor armazenado em uma variável e exibir uma mensagem personalizada.
+        
+        Na próxima aula:
+        Vamos aprender como trabalhar com estruturas de repetição!
+    </div>
+    
+</body>
+
+</html>
