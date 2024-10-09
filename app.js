@@ -10,3 +10,7 @@ if (chute == numeroSecreto) {
 } else {
     alert('Você errou :(')
 }
+
+
+// if significa 'se'
+// else significa 'senão'
