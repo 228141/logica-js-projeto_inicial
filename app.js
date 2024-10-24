@@ -21,7 +21,7 @@ while (chute != numeroSecreto){
     }
 }
 
-let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa'
+let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa' /*Essa é a parte do operador ternário*/
 alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}.`);
 
 /* 
