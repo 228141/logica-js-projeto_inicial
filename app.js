@@ -21,12 +21,16 @@ while (chute != numeroSecreto){
     }
 }
 
+let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa'
+alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}.`);
+
+/* 
 if (tentativas > 1) {
     alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas!`);
 } else {
     alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativa!`);
 }
-
+*/ 
 // if significa 'se'
 // else significa 'senão'
 // != - Diferente
